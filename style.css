@@ -7,13 +7,14 @@
   font-family: "Roboto", "san-serif";
   outline: none;
 }
-
+html {
+  background: linear-gradient(to top left, #50085b, #6d0c0c);
+}
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to top left, #50085b, #6d0c0c);
-  min-height: 100vh;
+  height: 100vh;
 }
 
 body::after {
@@ -42,6 +43,7 @@ body::before {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.1);
   width: 50%;
+  max-width: 400px;
   padding: 2em;
   border-radius: 0.5em;
   box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
@@ -106,4 +108,10 @@ button#set:hover {
 }
 button#set:active {
   transform: scale(1);
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    width: 80%;
+  }
 }
